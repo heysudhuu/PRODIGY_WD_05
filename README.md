@@ -2,8 +2,8 @@
 
 A sleek, modern, and feature-rich weather dashboard built with vanilla JavaScript, HTML5, and CSS3. This application provides real-time weather data, detailed forecasts, and advanced metrics with a beautiful, animated, and user-friendly interface.
 
-![Weather Dashboard Screenshot](https://placehold.co/800x450/1f2937/f9fafb?text=Weather+Dashboard+UI)
-*(Replace this placeholder with a screenshot of your application)*
+![Weather Dashboard Screenshot](msedge_kCBq1nDVAP.png)
+
 
 ---
 
