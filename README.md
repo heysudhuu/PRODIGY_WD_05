@@ -47,7 +47,7 @@ You will need a modern web browser like Google Chrome, Firefox, or Microsoft Edg
 
 1.  **Clone the repository:**
     ```sh
-    git clone [https://github.com/your-username/weather-dashboard.git](https://github.com/your-username/weather-dashboard.git)
+    git clone [https://github.com/heysudhuu/weather-dashboard.git](https://github.com/heysudhuu/weather-dashboard.git)
     ```
 2.  **Navigate to the project directory:**
     ```sh
