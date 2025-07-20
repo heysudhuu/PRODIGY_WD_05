@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <div class="header-left">
+                <h1>Weather Dashboard</h1>
+                <div id="searchHistory" class="search-history"></div>
+            </div>
+            <div class="header-right">
+                <div class="units-toggle">
+                    <label>
+                        <input type="checkbox" id="unitSwitch" />
+                        <span class="slider"></span>
+                        <span class="labels" data-on="°F" data-off="°C"></span>
+                    </label>
+                </div>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="theme-checkbox">
+                        <input type="checkbox" id="theme-checkbox" />
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="search-wrapper">
+                <div class="input-group">
+                    <input type="text" id="cityInput" placeholder="Enter city name or zip code" autocomplete="off">
+                    <button type="button" id="searchBtn">Search</button>
+                    <button type="button" id="locationBtn" title="Use My Location">📍</button>
+                </div>
+                <div id="autocompleteResults" class="autocomplete-results"></div>
+            </div>
+
+            <div class="loader hidden" id="loader"></div>
+
+            <div id="weatherContent" class="hidden">
+                <div class="current-weather-card">
+                    <div class="current-info">
+                        <h2 id="cityName">--</h2>
+                        <p id="localTime" class="sub-text">--</p>
+                        <p id="temp">--</p>
+                        <p id="condition">--</p>
+                    </div>
+                    <div class="current-icon">
+                        <img id="weatherIcon" src="" alt="Weather Icon" />
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="card hourly-container">
+                        <h3>Today's Forecast</h3>
+                        <div class="hourly-grid" id="hourlyGrid"></div>
+                    </div>
+
+                    <div class="card details-card">
+                        <h3>Current Details</h3>
+                        <div class="details-grid">
+                            <p id="feelsLike"><span>Feels Like</span>--</p>
+                            <p id="humidity"><span>Humidity</span>--</p>
+                            <p id="wind"><span>Wind</span>--</p>
+                            <p id="visibility"><span>Visibility</span>--</p>
+                            <p id="pressure"><span>Pressure</span>--</p>
+                            <p id="chanceOfRain"><span>Chance of Rain</span>--</p>
+                        </div>
+                    </div>
+
+                    <div class="card uv-card">
+                        <h3>UV Index</h3>
+                        <div class="uv-gauge">
+                            <div class="uv-needle" id="uvNeedle"></div>
+                        </div>
+                        <p id="uvText">--</p>
+                    </div>
+
+                    <div class="card astro-card">
+                        <h3>Astronomy</h3>
+                        <div class="astro-grid">
+                            <p id="sunrise"><span>Sunrise</span>--</p>
+                            <p id="sunset"><span>Sunset</span>--</p>
+                            <p id="moonrise"><span>Moonrise</span>--</p>
+                            <p id="moonset"><span>Moonset</span>--</p>
+                            <p id="moon_phase" class="astro-full-width"><span>Phase</span>--</p>
+                        </div>
+                    </div>
+
+                    <div class="card air-quality-card">
+                        <h3>Air Quality (US EPA Index)</h3>
+                        <p id="aqiValue">--</p>
+                        <p id="aqiText" class="sub-text">--</p>
+                        <div id="aqiDetails" class="aqi-details"></div>
+                    </div>
+                </div>
+
+                <div class="forecast-container">
+                    <h3>5-Day Forecast</h3>
+                    <div class="forecast-grid" id="forecastGrid"></div>
+                </div>
+                 <div id="alertContainer" class="alert-container hidden">
+                    <h3>⚠️ Alerts</h3>
+                    <div id="alerts"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+     <div id="errorModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p id="errorMsg"></p>
+        </div>
+    </div>
+    <div id="hourlyDetailModal" class="modal hidden">
+        <div class="modal-content" id="hourlyDetailContent">
+             <span class="close-button">&times;</span>
+             </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
